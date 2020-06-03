@@ -1,0 +1,25 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1590999953450'); /* IE9 */
+  src: url('iconfont.eot?t=1590999953450#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPEAAsAAAAAB9gAAAN2AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqDPIMIATYCJAMMCwgABCAFhG0HPBvUBlGUDUqX7Gdh7EwLoyOEH9OX1egmvRHfg7DYud9v3OLh37Hffdu+YdYgiUa6RzFJlECERIyUziF7Jun+L126trB5vltWrammv5H/++92Lm0Bj3J4lEJIEI6BcTrQB+RkIyO0R/UC17f+/7mc3l0lPr9luYw1bcyFURz3vBfoHrimBVwgAXmL7K5ALHIzgSYDunILlscLVBVmr0DcxGgLqhm10pAY6kK1YmLpjDoV9XSfrgA8BN+PT6qBIKlk5rDV65UL0xcvh7n4/5aH4IxnBD+NjEmgEMeV5l2FyDupoEkVF5sjq4qQxnL8/xOwNWl1pX+8RFSZ8S1gFPsSLxwawUs+Cec/jSpquMPOTUKgvBwCHBgsG4PRi8I8P3u8vnq9vHg+PUWMTACBJZOV40xA21gUit7bQ2lZ4XStUVBDYxRA87gEunKU7tU5kQRkwpm9GPiovkt3nO57jdVHfs+Dd4VlC+3F8+WF1lJCl+tUah0db6dMMcafHZ49mqnLaGQ0m5FtCn1ybxqZ6KSnF/B49tg2aC6mtH3+F+1Btn9+tl0BhKuBbCdPUShQbicfk9ul2kHHoHYM34HaO0cQi8lyYcwBAW64d5wboBQXJK/4phwNYD3bASMigHaWMiKClpBo7t0VFnt1572xwpYa9vDJV+DnaGvqkSDhQ/WGfR107IfJdfZ9wC1dUC4WjuzBwViZWuTbUWzyjqWzrWqM1Tk4xnb1EGG/lu/1nfPdXTXtvWPx3lSfSXvKeKcA/3uZ5s8AgPyd9vN+Y3nxC4M6+l91BTz9uT6w/u8VcGn91izBr2pW1ABF4JmaXBSxxpxAtmFgd0KTpeEHJUOXv/7SXnA8oa43gaSmH7K6QbQQJqGi2RRU1U1Dkwmb6c26sYIoDYz7RBA6fEPS5hGyDj9oIfxCRZ9/qOoIMDTZDvKCzYYjBmWWSpaQi/Y7GieOlK2Teph4Iv0ILE7zAuKNODMOHCkq5wMbiojHGJI99VhEoeI4xDXajoIgxoRjjxzp30WSyUApsupCfScOoW4eIxZBXMj2DhmOWER59UW98PkToj0ELNxQUaW/ISxjWkcjfUMAuhFHoIpr2SXzpI0JoSCFxUJojYwksLwxlFS38xCH6Lv3cCcmBqSagor780vD59sATcwBOVLkKGqXMVb0YSuqOU6kZyLdAwAAAA==') format('woff2'),
+  url('iconfont.woff?t=1590999953450') format('woff'),
+  url('iconfont.ttf?t=1590999953450') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1590999953450#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dianzan:before {
+  content: "\e60b";
+}
+
+.icon-yanjing-:before {
+  content: "\e65c";
+}
+
