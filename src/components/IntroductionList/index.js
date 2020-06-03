@@ -1,2 +1,2 @@
-import IntroductionList from './List.vue'
+import IntroductionList from './IntroductionList.vue'
 export default IntroductionList

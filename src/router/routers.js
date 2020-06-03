@@ -4,13 +4,13 @@ import Layout from '../Layout/index.vue'
 export const routers = [
   {
     path: '/',
-    name: '_home',
-    redirect: '/home', // 路由重定向
+    name: '_timeline',
+    redirect: '/timeline', // 路由重定向
     component: Layout,
     children: [
       {
-        path: '/home',
-        name: 'home',
+        path: '/timeline',
+        name: 'timeline',
         component: Home
       }
     ]
