@@ -8,6 +8,7 @@ import 'view-design/dist/styles/iview.css'
 import 'mavon-editor/dist/css/index.css'
 import './assets/css/iconfont/symbol-iconfont/iconfont.js'
 import './assets/css/iconfont/symbol-iconfont/iconfont.css'
+import './assets/css/iconfont/iconfonts/remixicon.css'
 
 Vue.use(mavonEditor)
 

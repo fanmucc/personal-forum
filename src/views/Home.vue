@@ -1,11 +1,14 @@
 <script>
 import YouList from '../components/List'
 import IntroductionList from '../components/IntroductionList'
+import { Icon, Button } from 'view-design'
 export default {
   name: 'Home',
   components: {
     YouList,
-    IntroductionList
+    IntroductionList,
+    Icon,
+    Button
   },
   data () {
     return {
@@ -16,8 +19,11 @@ export default {
           time: '20分钟前',
           column: '前端',
           columnId: 1,
-          name: '力栋',
-          nameId: 2
+          username: '力栋',
+          nameId: 2,
+          zan: 30,
+          against: 10,
+          collect: 1000
         },
         {
           title: '第二篇博客',
@@ -25,7 +31,7 @@ export default {
           time: '20分钟前',
           column: '前端',
           columnId: 1,
-          name: '力栋',
+          username: '力栋',
           nameId: 2
         },
         {
@@ -34,7 +40,7 @@ export default {
           time: '20分钟前',
           column: '前端',
           columnId: 1,
-          name: '力栋',
+          username: '力栋',
           nameId: 2
         },
         {
@@ -43,7 +49,7 @@ export default {
           time: '20分钟前',
           column: '前端',
           columnId: 1,
-          name: '力栋',
+          username: '力栋',
           nameId: 2
         },
         {
@@ -52,7 +58,7 @@ export default {
           time: '20分钟前',
           column: '前端',
           columnId: 1,
-          name: '力栋',
+          username: '力栋',
           nameId: 2
         },
         {
@@ -61,7 +67,7 @@ export default {
           time: '20分钟前',
           column: '前端',
           columnId: 1,
-          name: '力栋',
+          username: '力栋',
           nameId: 2
         },
         {
@@ -70,7 +76,7 @@ export default {
           time: '20分钟前',
           column: '前端',
           columnId: 1,
-          name: '力栋',
+          username: '力栋',
           nameId: 2
         },
         {
@@ -79,7 +85,7 @@ export default {
           time: '20分钟前',
           column: '前端',
           columnId: 1,
-          name: '力栋',
+          username: '力栋',
           nameId: 2
         }
       ]
@@ -97,7 +103,7 @@ export default {
       <div class="you-home">
         <div class="you-home-list">
           {this.list.map(item => {
-            return <you-list nativeOn-click={this.blogDetail.bind(this, item)} data={item} class="you-home-list-content"></you-list>
+            return <you-list class="you-home-list-content" nativeOn-click={this.blogDetail.bind(this, item)} value={item} titleBoolean={false}></you-list>
           })}
         </div>
       </div>
