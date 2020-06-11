@@ -10,6 +10,10 @@
  * @errorValue  input框失去焦点时,内容不符合要求时的状态; Boolean
  * @errorValueText input框失去焦点时, 内容不符合要求时的提示文字
  * @code  是否开启验证码
+ *
+ * 返回值
+ * 当type状态为 @text 或 @password 时,返回的值为输入值
+ * 当type状态为 @code 时， 返回的时值为 对象, 有 target 和 value
  */
 export default {
   name: 'YouInput',
@@ -54,7 +58,6 @@ export default {
   },
   computed: {
     placeholderText () {
-      console.log(`${this.error === true ? this.errorPlaceholder : this.placeholder}`)
       return `${this.error === true ? this.errorPlaceholder : this.placeholder}`
     },
     codeValueCom: {
@@ -71,10 +74,21 @@ export default {
   },
   methods: {
     inputChange (event) {
-      this.$emit('change', event.target.value)
+      // 如果开启随机验证码验证时, 则只返回 布尔值
+      if (this.code) {
+        const status = event.target.value === this.codeValue.toLowerCase() ? true : false
+        this.$emit('change', { target: event.target.value.length !== 0 ? status : null, value: event.target.value })
+      } else {
+        this.$emit('change', event.target.value)
+      }
     },
     inputBlur (event) {
-      this.$emit('blur', event.target.value)
+      if (this.code) {
+        const status = event.target.value === this.codeValue.toLowerCase() ? true : false
+        this.$emit('blur', { target: event.target.value.length !== 0 ? status : null, value: event.target.value })
+      } else {
+        this.$emit('blur', event.target.value)
+      }
     },
     // 随机生成验证码
     createCode () {

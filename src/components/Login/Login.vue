@@ -1,6 +1,7 @@
 <script>
 import { Button } from 'view-design'
 import YouInput from '../Input/index'
+import { Email, pwReg } from '../../lib/utils/Regexp'
 export default {
   name: 'Login',
   components: {
@@ -16,6 +17,7 @@ export default {
       passWordError: false,
       passWordErrorText: false,
       code: true,
+      codeValue: '',
       codeError: false,
       codeErrorText: false
     }
@@ -27,20 +29,41 @@ export default {
     },
     inputNameBlur (value) {
       if (value.length === 0) {
-        console.log(123)
         this.nameError = true
+        return
+      } else {
+        this.nameError = false
       }
       this.nameValue = value
+      Email.test(value) === false ? this.nameErrorText = true : this.nameErrorText = false
     },
     inputPasswordChange (value) {
+      if (value.length === 0) {
+        this.passWordError = true
+        return
+      } else {
+        this.passWordError = false
+      }
       this.passWord = value
+      pwReg.test(value) === false ? this.passWordErrorText = true : this.passWordErrorText = false
+    },
+    inputCodeChange (values) {
+      console.log(values, 123)
+      if (values.value.length === 0) {
+        this.codeError = true
+        return
+      } else {
+        this.codeError = false
+      }
+      this.codeValue = values.value
+      values.target === false ? this.codeErrorText = true : this.codeErrorText = false
     }
   },
   render () {
+    // <span on-click={ this.loginSwitch.bind(this, 'code') } class={{ loginheaderbtn: this.code === true ? true : false }}>扫码登录</span>
     return (
       <div class="login">
         <div class={{ loginheader: true }}>
-          <span on-click={ this.loginSwitch.bind(this, 'code') } class={{ loginheaderbtn: this.code === true ? true : false }}>扫码登录</span>
           <span on-click={ this.loginSwitch.bind(this, 'password') } class={{ loginheaderbtn: this.code === true ? false : true }}>密码登录</span>
         </div>
         <div class="login-content">
@@ -61,7 +84,7 @@ export default {
                 errorPlaceholder="请输入登录密码"
                 error={this.passWordError}
                 value={this.passWord}
-                on-change={this.inputPasswordChange}
+                on-blur={this.inputPasswordChange}
                 errorValue={this.passWordErrorText}
                 errorValueText="请输入正确的用户密码"></you-input>
             </div>
@@ -70,9 +93,10 @@ export default {
                 placeholder="验证码"
                 errorPlaceholder="请填写验证码"
                 code={this.code}
-                error={this.codeErro}
+                error={this.codeError}
                 errorValue={this.codeErrorText}
-                value=''
+                on-blur={this.inputCodeChange}
+                value={this.codeValue}
                 errorValueText="请输入正确的验证码:("></you-input>
             </div>
           </div>
