@@ -4,7 +4,7 @@ import Login from '../../components/Login'
 import Registered from '../../components/Registered'
 import { mapState } from 'vuex'
 import YouInput from '../../components/Input/index'
-import { Email, pwReg } from '../../lib/utils/Regexp'
+import { Email, pwReg, userNameValue } from '../../lib/utils/Regexp'
 
 import { getUserInfo } from '../../api/users.js'
 export default {
@@ -62,7 +62,7 @@ export default {
         this.nameError = false
       }
       this.nameValue = value
-      Email.test(value) === false ? this.nameErrorText = true : this.nameErrorText = false
+      Email.test(value) || userNameValue.test(value) === false ? this.nameErrorText = true : this.nameErrorText = false
     },
     inputPasswordChange (value) {
       if (value.length === 0) {
@@ -88,7 +88,6 @@ export default {
 
     // 用户点击登录
     youSignUp () {
-      console.log(this.nameErrorText, this.passWordErrorText, this.codeErrorText)
       if (!this.nameErrorText && !this.passWordErrorText && !this.codeErrorText) {
         console.log(123, '123')
         // 进行登录操作
@@ -96,7 +95,6 @@ export default {
           console.log(res)
         })
       }
-      return
     }
   },
   render () {

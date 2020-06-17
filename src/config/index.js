@@ -1,3 +1,3 @@
-const baseUrl = process.env.NODE === 'prodution' ? 'www.lilisifan.com' : 'localhost:3000'
+const baseUrl = process.env.NODE === 'prodution' ? 'www.lilisifan.com' : ''
 
 export default baseUrl
