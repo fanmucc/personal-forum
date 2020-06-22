@@ -29,7 +29,7 @@ router.beforeEach((to, form, next) => {
   // 获取token 如果没有则跳转出登录header
   let token = window.localStorage.token
   if (!token) {
-    console.log('123')
+    console.log('1234')
     next()
   } else {
     next()
