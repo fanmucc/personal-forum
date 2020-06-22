@@ -14,11 +14,16 @@ export default {
     }
   },
   mounted () {
-    // window.addEventListener('scroll', this.view)
+    window.addEventListener('scroll', this.view, true)
   },
   methods: {
-    view (event) {
-      console.log(event)
+    view (e) {
+      let scrollNum = e.target.documentElement.scrollTop || e.target.body.scrollTop
+      if (scrollNum >= 300) {
+        console.log(1)
+      } else {
+        console.log(2)
+      }
     }
   },
   computed: {
@@ -30,6 +35,7 @@ export default {
     return (
       <div class="you-layout">
         {this.loginStatus === true ? <layout-header class="you-layout-header"></layout-header> : <layout-not-header class="you-layout-header"></layout-not-header>}
+        <div class="aaa">123</div>
         <router-view class="you-layout-view"></router-view>
       </div>
     )
@@ -55,5 +61,8 @@ export default {
       margin-top: 80px;
       min-height: calc(100vh - 85px);
     }
+  }
+  .aaa {
+    margin-top: 80px;
   }
 </style>
