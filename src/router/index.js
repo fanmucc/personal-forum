@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import { routers } from './routers'
-
 Vue.use(VueRouter)
 
 const routes = routers
@@ -24,6 +23,16 @@ const routes = routers
 
 const router = new VueRouter({
   routes
+})
+
+router.beforeEach((to, form, next) => {
+  // 获取token 如果没有则跳转出登录header
+  let token = window.localStorage.token
+  if (!token) {
+    next()
+  } else {
+    next()
+  }
 })
 
 export default router

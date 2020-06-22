@@ -2,11 +2,11 @@
 import { Input, Button, Modal } from 'view-design'
 import Login from '../../components/Login'
 import Registered from '../../components/Registered'
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import YouInput from '../../components/Input/index'
 import { Email, pwReg, userNameValue } from '../../lib/utils/Regexp'
-
 import { getUserInfo } from '../../api/users.js'
+
 export default {
   name: 'LayoutHeader',
   components: {
@@ -20,7 +20,7 @@ export default {
   data () {
     return {
       winxincode: false,
-      loginDatas: 'false',
+      loginDatas: false,
       moda: false,
       signState: false,
       nameValue: '',
@@ -41,8 +41,10 @@ export default {
     })
   },
   methods: {
+    ...mapActions('user', [
+      'SIGN_UP'
+    ]),
     sign (value) {
-      console.log(value)
       this.moda = true
       if (value === 'in') this.signState = false
       else this.signState = true
@@ -89,11 +91,11 @@ export default {
     // 用户点击登录
     youSignUp () {
       if (!this.nameErrorText && !this.passWordErrorText && !this.codeErrorText) {
-        console.log(123, '123')
         // 进行登录操作
-        getUserInfo({ userName: this.nameValue, passWord: this.passWord }).then(res => {
-          console.log(res)
-        })
+        // getUserInfo({ userName: this.nameValue, passWord: this.passWord }).then(res => {
+        //   console.log(res)
+        // })
+        this.SIGN_UP({ userName: this.nameValue, passWord: this.passWord })
       }
     }
   },
