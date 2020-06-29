@@ -42,6 +42,7 @@ export default {
   },
   render () {
     const status = this.titleBoolean
+    console.log(status, '列表渲染状态')
     let elements
     if (status) {
       elements = <div>

@@ -30,25 +30,38 @@ export default {
   render () {
     return (
       <div class="layout-header">
-        <div class="layout-header-logo">YOU</div>
-        <div class="layout-header-list">
-          <ul class="layout-header-list-content">
-            <li>首页</li>
-            <li>发现</li>
-            <li>热点</li>
-            <li class="list-content-input"><Input suffix="ios-search" class="searchInput" placeholder="搜索文章" style="width: auto" /></li>
-          </ul>
-        </div>
         <div class="layout-header-user">
-          <Button type="primary" on-click={this.writing}>写文章</Button>
-          <Poptip placement="bottom">
-            <span><Icon type="md-notifications" /></span>
-            <div class="api" slot="content">
-              测试
-            </div>
-          </Poptip>
-          <span><Icon type="ios-chatbubbles" /></span>
-          <span><Avatar shape="square" src="https://i.loli.net/2017/08/21/599a521472424.jpg" icon="ios-person" size="30" /></span>
+          <div class="layout-header-user-logo">YOU</div>
+          <div class="layout-header-user-list">
+            <ul class="layout-header-user-list-content">
+              <li>首页</li>
+              <li>发现</li>
+              <li>热点</li>
+              <li class="list-content-input"><Input suffix="ios-search" class="searchInput" placeholder="搜索文章" style="width: auto" /></li>
+            </ul>
+          </div>
+          <div class="layout-header-user-users">
+            <Button type="primary" on-click={this.writing}>写文章</Button>
+            <Poptip placement="bottom">
+              <span><Icon type="md-notifications" /></span>
+              <div class="api" slot="content">
+                测试
+              </div>
+            </Poptip>
+            <span><Icon type="ios-chatbubbles" /></span>
+            <span><Avatar shape="square" src="https://i.loli.net/2017/08/21/599a521472424.jpg" icon="ios-person" size="30" /></span>
+          </div>
+        </div>
+        <div class="layout-header-label">
+          <ul class="layout-header-label-list">
+            <li>推荐</li>
+            <li>关注</li>
+            <li>后端</li>
+            <li>前端</li>
+            <li>Android</li>
+            <li>IOS</li>
+            <li>人工智能</li>
+          </ul>
         </div>
       </div>
     )
@@ -60,41 +73,107 @@ export default {
     list-style: none;
   }
   .layout-header {
-    width: 100%;
-    line-height: 4em;
+    width: 100vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    background-color: #fff;
-    &-logo {
-      flex:1;
-      text-align: center;
-    }
-    &-list {
-      &-content {
-        display: flex;
-        width: 100%;
-        color: #71777c;
-      }
-      &-content li {
-        padding:0 1em;
-        cursor: pointer;
-      }
-      &-content li:hover {
-        color: #007fff;
-      }
-    }
+    flex-direction: column;
+    line-height: 60px;
+    background: #fff;
     &-user {
-      flex: 1;
-      text-align: left;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
       align-items: center;
-      font-size: 25px;
-      & span {
-        margin:0 .5em;
+      font-size: 16px;
+      background-color: #fff;
+      border-bottom: 1px solid #f6f6f6;
+      &-logo {
+        flex: 20%;
+        text-align: right;
+        padding-right: 30px;
+        font-size: 26px;
+      }
+      &-list {
+        width: 50%;
+        &-content {
+            display: flex;
+            width: 100%;
+            color: #71777c;
+        }
+        &-content li {
+          padding:0 1em;
+          cursor: pointer;
+        }
+        &-content li:hover {
+          color: #007fff;
+        }
+      }
+      &-users {
+        width: 30%;
+        text-align: left;
+        align-items: center;
+        font-size: 25px;
+        & span {
+          margin:0 .5em;
+        }
+      }
+    }
+    &-label {
+      width: 100vw;
+      font-size: 16px;
+      line-height: 50px;
+      padding-left: calc(20% - 76px);
+      color: #909090;
+      border-bottom: 1px solid #f6f6f6;
+      &-list {
+        display: flex;
+        & li {
+          padding: 0 10px 0 10px;
+        }
+        & li:nth-child(1) {
+          padding-left: 0;
+        }
+        & li:hover {
+          color: #007fff;
+        }
       }
     }
   }
+  // .layout-header {
+  //   width: 100%;
+  //   line-height: 4em;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   font-size: 16px;
+  //   background-color: #fff;
+  //   &-logo {
+  //     flex:1;
+  //     text-align: center;
+  //   }
+  //   &-list {
+  //     &-content {
+  //       display: flex;
+  //       width: 100%;
+  //       color: #71777c;
+  //     }
+  //     &-content li {
+  //       padding:0 1em;
+  //       cursor: pointer;
+  //     }
+  //     &-content li:hover {
+  //       color: #007fff;
+  //     }
+  //   }
+  //   &-user {
+  //     flex: 1;
+  //     text-align: left;
+  //     align-items: center;
+  //     font-size: 25px;
+  //     & span {
+  //       margin:0 .5em;
+  //     }
+  //   }
+  // }
   .list-content-input {
     flex: 1;
   }

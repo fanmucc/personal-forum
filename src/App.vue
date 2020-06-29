@@ -12,13 +12,13 @@ export default {
 </script>
 <style lang="less">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: rgb(246, 246, 246);
   color: #2c3e50;
   box-sizing: border-box;
-  width: 100vw;
+  max-width: 100vw;
 }
 
 #nav {
