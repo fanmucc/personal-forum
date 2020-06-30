@@ -21,6 +21,14 @@ export const routers = [
       }
     ]
   },
+  {
+    path: '/editor/drafts/new',
+    name: 'editor_drafts_new',
+    meta: {
+      title: '编辑'
+    },
+    component: () => import(/* webpackChunkName: "editor_drafts_new" */ '../views/EditorDraftsNew')
+  }
   // {
   //   path: '/post/:articleId',
   //   name: 'article', // 文章详情

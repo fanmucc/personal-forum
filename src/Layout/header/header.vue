@@ -61,6 +61,13 @@ export default {
             <li>Android</li>
             <li>IOS</li>
             <li>人工智能</li>
+            <li>推荐</li>
+            <li>关注</li>
+            <li>后端</li>
+            <li>前端</li>
+            <li>Android</li>
+            <li>IOS</li>
+            <li>人工智能</li>
           </ul>
         </div>
       </div>
@@ -118,7 +125,8 @@ export default {
       }
     }
     &-label {
-      width: 100vw;
+      max-width: 100vw;
+      // overflow: scroll;
       font-size: 16px;
       line-height: 50px;
       padding-left: calc(20% - 76px);
