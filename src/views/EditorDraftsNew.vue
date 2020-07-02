@@ -51,7 +51,21 @@ export default {
       visible: false
     }
   },
+  mounted () {
+    // 获取文章缓存记录 or 接口数据
+    this.getDrafts()
+  },
   methods: {
+    getDrafts () {
+      let data = JSON.parse(window.sessionStorage .markdown)
+      this.title = data.title
+      this.value = data.value
+    },
+    // 文章title
+    draftsTitleChange (e) {
+      console.log(e.target.value)
+      this.title = e.target.value
+    },
     handleOpen () {
       this.visible = true
     },
@@ -59,9 +73,11 @@ export default {
       this.visible = false
     },
     // 保存事件
-    save (e) {
+    save () {
+      console.log(this)
       let dates = {}
-      dates.value = e
+      console.log(this.title)
+      dates.value = this.value
       dates.title = this.title
       window.sessionStorage.markdown = JSON.stringify(dates)
     }
@@ -70,7 +86,7 @@ export default {
     return (
       <div class="you-drafts">
         <div class="you-drafts-header">
-          <input type="text" class="you-drafts-header-title" value={this.title} placeholder="请输入文章标题..." />
+          <input type="text" class="you-drafts-header-title" value={this.title} on-change={this.draftsTitleChange.bind(this)} placeholder="请输入文章标题..." />
           <div class="you-drafts-header-right">
             <Dropdown trigger="click" visible={this.visible} class="you-drafts-header-right-btn you-drafts-header-right-content" style="margin-left: 20px;">
               <a href="javascript:void(0)">

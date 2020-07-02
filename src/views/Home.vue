@@ -140,7 +140,7 @@ export default {
   methods: {
     blogDetail (item) {
       this.$router.push({
-        name: 'article'
+        path: '/post/123'
       })
     }
     // <div class="you-home-header">
@@ -184,14 +184,12 @@ export default {
   justify-content: center;
   &-list {
     width: 50vw;
-    margin-top: 50px;
      &-right {
       width: 20%;
       margin-left: 20px;
     }
   }
   &-article {
-    margin-top: 50px;
     width: 250px;
     margin-left: 20px;
     font-size: 16px !important;

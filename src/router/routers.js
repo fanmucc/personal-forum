@@ -22,21 +22,29 @@ export const routers = [
     ]
   },
   {
-    path: '/editor/drafts/new',
+    path: '/editor/drafts/new', // 文章编辑
     name: 'editor_drafts_new',
     meta: {
       title: '编辑'
     },
     component: () => import(/* webpackChunkName: "editor_drafts_new" */ '../views/EditorDraftsNew')
+  },
+  {
+    path: '/',
+    name: 'article',
+    meta: {
+      title: '文章详情'
+    }, // 路由元信息
+    props: { default: true, sidebar: false },
+    component: Layout,
+    children: [
+      {
+        path: 'post/:articleId',
+        name: 'articleList',
+        component: () => import(/* webpackChunkName: "article" */ '../views/Drafts')
+      }
+    ]
   }
-  // {
-  //   path: '/post/:articleId',
-  //   name: 'article', // 文章详情
-  //   meta: {
-  //     title: '文章详情'
-  //   }, // 路由元信息
-  //   component: () => import(/* */ '')
-  // },
   // {
   //   path: '/timeline/following',
   //   name: 'userAttention', // 用户关注

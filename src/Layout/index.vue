@@ -8,6 +8,12 @@ export default {
     LayoutHeader,
     LayoutNotHeader
   },
+  props: {
+    default: {
+      type: Boolean,
+      default: false
+    }
+  },
   data () {
     return {
       moda: true,
@@ -16,6 +22,7 @@ export default {
   },
   mounted () {
     window.addEventListener('scroll', this.view, true)
+    console.log(this.default)
   },
   methods: {
     view (e) {
@@ -66,11 +73,9 @@ export default {
     }
     &-view {
       margin: 0 auto;
-      margin-top: 65px;
-      min-height: calc(100vh - 85px);
+      margin-top: 112px;
+      padding: 20px;
+      min-height: calc(100vh - 112px);
     }
-  }
-  .aaa {
-    margin-top: 80px;
   }
 </style>
