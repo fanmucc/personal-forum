@@ -42,14 +42,22 @@ export default {
           </div>
           <div class="layout-header-user-users">
             <Button type="primary" on-click={this.writing}>写文章</Button>
+            <span><Icon type="md-notifications" /></span>
+            <span><Icon type="ios-chatbubbles" /></span>
             <Poptip placement="bottom">
-              <span><Icon type="md-notifications" /></span>
+              <span><Avatar shape="square" src="https://i.loli.net/2017/08/21/599a521472424.jpg" icon="ios-person" size="30" /></span>
               <div class="api" slot="content">
-                测试
+                <ul>
+                  <li>写文章</li>
+                  <li>写文章</li>
+                  <li>写文章</li>
+                  <li>写文章</li>
+                  <li>写文章</li>
+                  <li>写文章</li>
+                  <li>写文章</li>
+                </ul>
               </div>
             </Poptip>
-            <span><Icon type="ios-chatbubbles" /></span>
-            <span><Avatar shape="square" src="https://i.loli.net/2017/08/21/599a521472424.jpg" icon="ios-person" size="30" /></span>
           </div>
         </div>
         <div class="layout-header-label">
