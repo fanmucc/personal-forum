@@ -239,8 +239,8 @@ export default {
     }
     &-label {
       width: 100vw;
-      font-size: 16px;
-      line-height: 50px;
+      font-size: 15px;
+      line-height: 40px;
       padding-left: calc(20% - 76px);
       color: #909090;
       border-bottom: 1px solid #f6f6f6;
@@ -263,49 +263,6 @@ export default {
     text-align: right;
     padding-right: 4em !important;
   }
-//   .layout-header {
-//     width: 100%;
-//     // line-height: 4em;
-//     display: flex;
-//     flex-direction: column;
-//     // &-user {
-//     //     display: flex;
-//     //     justify-content: center;
-//     //     align-items: center;
-//     //     font-size: 16px;
-//     //     background-color: #fff;
-//     //     &-logo {
-//     //         flex:1;
-//     //     }
-//     //     &-list {
-//     //       width: 40%;
-//     //       &-content {
-//     //         display: flex;
-//     //         width: 100%;
-//     //         color: #71777c;
-//     //       }
-//     //     &-content li {
-//     //       padding:0 1em;
-//     //       cursor: pointer;
-//     //     }
-//     //     &-content li:hover {
-//     //       color: #007fff;
-//     //     }
-//     //   }
-//     // }
-//     &-user-sign {
-//       flex: 1;
-//       text-align: left;
-//       & button {
-//         margin:0 1em;
-//       }
-//     }
-//   }
-//   .list-content-input {
-//     flex: 1;
-//     text-align: right;
-//     padding-right: 4em !important;
-//   }
   .vertical-center-modal{
         display: flex;
         align-items: center;
@@ -326,26 +283,116 @@ export default {
     color: grey;
   }
 
-//   .login {
-//   width: 100%;
-//   .loginheader {
-//     font-size: 16px;
-//     & span {
-//       cursor: pointer;
-//       padding: 5px 10px 15px 10px;
-//     }
-//   }
-//   &-content {
-//     margin-top: 30px;
-//     width: 100%;
-//   }
-//   .login-text {
-//     line-height: 3em;
-//   }
-// }
-// // .loginheaderbtn {
-// //   color: #1a1a1a;
-// //   font-weight: 600;
-// //   border-bottom: 3px solid #0084ff;;
-// // }
+
+
+
+  // .layout-header {
+  //   width: 100vw;
+  //   display: flex;
+  //   flex-direction: column;
+  //   line-height: 60px;
+  //   background: #fff;
+  //   &-user {
+  //     width: 100vw;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     font-size: 16px;
+  //     background-color: #fff;
+  //     border-bottom: 1px solid #f6f6f6;
+  //     &-logo {
+  //       flex: 20%;
+  //       text-align: right;
+  //       padding-right: 30px;
+  //       font-size: 26px;
+  //     }
+  //     &-list {
+  //       width: 50%;
+  //       &-content {
+  //           display: flex;
+  //           width: 100%;
+  //           color: #71777c;
+  //       }
+  //       &-content li {
+  //         padding:0 1em;
+  //         cursor: pointer;
+  //       }
+  //       &-content li:hover {
+  //         color: #007fff;
+  //       }
+  //     }
+  //     &-users {
+  //       width: 30%;
+  //       text-align: left;
+  //       align-items: center;
+  //       font-size: 25px;
+  //       & span {
+  //         margin:0 .5em;
+  //       }
+  //     }
+  //   }
+  //   &-label {
+  //     max-width: 100vw;
+  //     // overflow: scroll;
+  //     font-size: 15px;
+  //     line-height: 40px;
+  //     padding-left: calc(20% - 76px);
+  //     color: #909090;
+  //     border-bottom: 1px solid #f6f6f6;
+  //     &-list {
+  //       display: flex;
+  //       & li {
+  //         padding: 0 10px 0 10px;
+  //       }
+  //       & li:nth-child(1) {
+  //         padding-left: 0;
+  //       }
+  //       & li:hover {
+  //         color: #007fff;
+  //       }
+  //     }
+  //   }
+  // }
+  // .layout-header {
+  //   width: 100%;
+  //   line-height: 4em;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   font-size: 16px;
+  //   background-color: #fff;
+  //   &-logo {
+  //     flex:1;
+  //     text-align: center;
+  //   }
+  //   &-list {
+  //     &-content {
+  //       display: flex;
+  //       width: 100%;
+  //       color: #71777c;
+  //     }
+  //     &-content li {
+  //       padding:0 1em;
+  //       cursor: pointer;
+  //     }
+  //     &-content li:hover {
+  //       color: #007fff;
+  //     }
+  //   }
+  //   &-user {
+  //     flex: 1;
+  //     text-align: left;
+  //     align-items: center;
+  //     font-size: 25px;
+  //     & span {
+  //       margin:0 .5em;
+  //     }
+  //   }
+  // }
+  // .list-content-input {
+  //   flex: 1;
+  // }
+  // .searchInput {
+  //   width: 100% !important;
+  // }
 </style>

@@ -143,32 +143,41 @@ export default {
         path: '/post/123'
       })
     }
-    // <div class="you-home-header">
-    //   <ul class="you-home-header-nav">
-    //     {
-    //       this.headerList.map(item => {
-    //         return <li>{item.title}</li>
-    //       })
-    //     }
-    //   </ul>
-    // </div>
+    // <div class="you-home-list">
+    //       {
+    //         this.list.map(item => {
+    //           return <you-list class="you-home-list-content" nativeOn-click={this.blogDetail.bind(this, item)} value={item} titleBoolean={false}></you-list>
+    //         })
+    //       }
+    //     </div>
+    //     <div class="you-home-article">
+    //       {
+    //         this.articleList.map(item => {
+    //           return <you-list class="you-home-list-content" value={item} titleBoolean={true}></you-list>
+    //         })
+    //       }
+    //     </div>
   },
   render () {
     return (
       <div class="you-home">
-        <div class="you-home-list">
-          {
-            this.list.map(item => {
-              return <you-list class="you-home-list-content" nativeOn-click={this.blogDetail.bind(this, item)} value={item} titleBoolean={false}></you-list>
-            })
-          }
-        </div>
-        <div class="you-home-article">
-          {
-            this.articleList.map(item => {
-              return <you-list class="you-home-list-content" value={item} titleBoolean={true}></you-list>
-            })
-          }
+        <div class="layout-header-label">
+          <ul class="layout-header-label-list">
+            <li>推荐</li>
+            <li>关注</li>
+            <li>后端</li>
+            <li>前端</li>
+            <li>Android</li>
+            <li>IOS</li>
+            <li>人工智能</li>
+            <li>推荐</li>
+            <li>关注</li>
+            <li>后端</li>
+            <li>前端</li>
+            <li>Android</li>
+            <li>IOS</li>
+            <li>人工智能</li>
+          </ul>
         </div>
       </div>
     )
