@@ -49,19 +49,21 @@ export default {
   },
   render () {
     return (
-      <div class="you">
+      <div class="you container">
         <div class="you-main-header-box">
-          <header class="main-header">
+          <header class="main-header main-header visible">
             <layout-header class={ ['you-layout-header', this.translate ? 'you-layout-header-translate' : '']} />
           </header>
         </div>
-        <div class="you-mian-container"></div>
+        <main class="container main-container with-view-nav">
+          <router-view></router-view>
+        </main>
       </div>
     )
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
   .you {
       overflow-x: initial;
       width: 100vw;
@@ -73,15 +75,36 @@ export default {
         width: 100%;
         height: 4rem;
         background: #fff;
-        .main-header {
+        .visible {
           transform: translateZ(0);
+        }
+        .main-header {
           position: fixed;
           width: 100%;
           top: 0;
           left: 0;
           right: 0;
           transition: all .2s;
+          // transform: translate3d(0,-100%,0);
         }
+        .main-header {
+            background: #fff;
+            border-bottom: 1px solid #f1f1f1;
+            color: #909090;
+            height: 4rem;
+            z-index: 250;
+        }
+      }
+      .container {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 960px;
+      }
+      .container::after {
+        display: table;
+        content: "";
+        clear: both;
       }
   }
   // .you {

@@ -21,6 +21,7 @@ export default {
   max-width: 100vw;
   font-size: 12px;
   line-height: normal;
+  overflow-x: initial;
 }
 * {
   margin: 0;
