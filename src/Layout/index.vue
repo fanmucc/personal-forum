@@ -66,7 +66,7 @@ export default {
 <style lang="less">
   .you {
       overflow-x: initial;
-      width: 100vw;
+      width: 100%;
       margin: 0;
       padding: 0;
       &-main-header-box {
@@ -107,28 +107,4 @@ export default {
         clear: both;
       }
   }
-  // .you {
-  //   position:relative;
-  //   width: 100%;
-  //   margin: 0;
-  //   padding: 0;
-  //   overflow: hidden;
-  //   &-header {
-  //     position: fixed;
-  //     top: 0;
-  //     width: 100%;
-  //     // height: 65px;
-  //     z-index: 999;
-  //     transition: top .5s;
-  //   };
-  //   &-header-translate {
-  //     top: -65px;
-  //   }
-  //   &-view {
-  //     margin: 0 auto;
-  //     margin-top: 112px;
-  //     padding: 20px;
-  //     min-height: calc(100vh - 112px);
-  //   }
-  // }
 </style>

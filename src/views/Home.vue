@@ -183,6 +183,7 @@ export default {
                 })
               }
             </div>
+            <aside class="index-aside aside">123</aside>
           </div>
         </div>
       </div>
@@ -261,6 +262,19 @@ export default {
           border-radius: 2px;
           width: 700px;
       }
+    }
+    .index-aside {
+        background: #fff;
+        width: 15rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+    .aside {
+        position: absolute;
+        top: 0;
+        right: 0;
     }
   }
 }
